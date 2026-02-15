@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Oskari Laitinen - Personal Website" />
+    <meta name="theme-color" content="#01050d" />
+    <title>Oskari Laitinen</title>
+
+    <!-- Favicon (add favicon.png to repo root) -->
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        * { box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            color: #cfd9e6;
+            background: #01050d;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            background:
+                radial-gradient(800px 500px at 15% 20%, rgba(20,40,90,0.35), transparent 60%),
+                radial-gradient(700px 400px at 85% 75%, rgba(10,25,60,0.4), transparent 60%),
+                linear-gradient(180deg, #01050d 0%, #020814 50%, #00040a 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 25s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            padding: 120px 20px 60px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            margin: 0;
+            font-size: 56px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        nav a {
+            color: #9fb3c8;
+            text-decoration: none;
+            margin: 0 22px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: opacity 0.2s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.6;
+        }
+
+        main { flex: 1; }
+
+        section {
+            max-width: 720px;
+            margin: 100px auto;
+            padding: 50px;
+            background: rgba(15, 30, 60, 0.25);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+        }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding-bottom: 12px;
+            margin-bottom: 30px;
+        }
+
+        /* Project Cards */
+        .projects-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .project-card {
+            padding: 25px;
+            border-radius: 14px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: transform 0.2s ease, border 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        /* Contact Links */
+        .contact-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #9fb3c8;
+            padding: 10px 16px;
+            border-radius: 30px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            background: rgba(255,255,255,0.06);
+            color: #ffffff;
+        }
+
+        /* Minimal bottom spacing */
+        .bottom-space { height: 120px; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 34px; }
+            section {
+                margin: 60px 20px;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Oskari Laitinen</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p></p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card"></div>
+                <div class="project-card"></div>
+                <div class="project-card"></div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:">laitinenoskari07@gmail.com</a>
+                <a href="https://tinyurl.com/zlappy" target="_blank" rel="noopener" aria-label="YouTube">YouTube</a>
+            </div>
+        </section>
+    </main>
+
+    <div class="bottom-space"></div>
+
+</body>
+</html>
